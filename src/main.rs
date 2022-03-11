@@ -1,4 +1,5 @@
 use clap::{App, Arg};
+use std::process::Command;
 
 fn main() {
     // TODO: add an option to not preserve history (by default we preserve history in this tool)
@@ -14,8 +15,20 @@ fn main() {
         .get_matches();
 
     let command: Vec<&str> = matches.values_of("command").unwrap().collect();
+    // TODO: number of times to repeat, if given
+    let mut count: usize = 0;
 
-    // TODO: watch over the command saved in `command` above
+    let mut cmd = Command::new("sh");
+    cmd.arg("-c"); // arg for `sh` command, for new shell
+    cmd.arg(command.join(" ")); // the `command` is an arg to `sh` above
 
-    println!("{:?}", command);
+    // TODO: time interval
+    loop {
+        count += 1;
+        println!("{:?}", cmd);
+        // TODO: give better error message
+        let output = cmd.output().expect("aaaaaaa");
+        // TODO: display newlines and not escaped `\n`
+        println!("{:?}", String::from_utf8_lossy(output.stdout.as_slice()));
+    }
 }
