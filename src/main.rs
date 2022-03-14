@@ -7,9 +7,7 @@ fn main() {
     // TODO: define target os only to linux
     let watchr_app = App::new("watchr")
         .version("0.1.0")
-        .about(
-            "Watch a command every few seconds. Like watch command but with a few better options.",
-        )
+        .about("Execute a command periodically. Like watch(1) command.")
         .author("Amanjeev Sethi")
         .arg(
             Arg::new("clear")
