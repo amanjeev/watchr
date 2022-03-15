@@ -24,3 +24,8 @@ OPTIONS:
     -h, --help           Print help information
     -V, --version        Print version information
 ```
+
+## Caveats
+
+- Does not support error propagation if exit code is not 0 of your command
+- Linux only
