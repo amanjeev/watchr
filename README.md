@@ -5,6 +5,12 @@ which runs your command periodically.  The enhancement in this tool over that on
 one allows you to see the history of the runs if you want to compare your command's current output
 with an iteration a few seconds ago.
 
+## Installation
+
+`cargo install watchr`
+
+This will deploy a binary named `wr` in your `.cargo` directory.
+
 ## Usage
 
 ```shell
