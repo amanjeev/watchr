@@ -14,21 +14,18 @@ This will deploy a binary named `wr` in your `.cargo` directory.
 ## Usage
 
 ```shell
-watchr 0.1.0
-Amanjeev Sethi
-Execute a command periodically. Like watch(1) command.
+Incomplete `GNU cat` in Rust for learning purposes
 
-USAGE:
-    wr [OPTIONS] <command>...
+Usage: wr [OPTIONS] <command>
 
-ARGS:
-    <command>...    Command to watch over
+Arguments:
+  <command>
 
-OPTIONS:
-    -c                   Clear the terminal on each iteration
-    -d <duration>        Duration in seconds to repeat the command execution [default: 1]
-    -h, --help           Print help information
-    -V, --version        Print version information
+Options:
+  -c
+  -d <duration>      [default: 1]
+  -h, --help         Print help
+  -V, --version      Print version
 ```
 
 ## Caveats
