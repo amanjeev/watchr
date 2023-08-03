@@ -14,4 +14,4 @@ name = "wr"
 path = "src/main.rs"
 
 [dependencies]
-clap = { version = "3.0.0-rc.7", features = ["derive"] }
+clap = { version = "4", features = ["derive"] }
